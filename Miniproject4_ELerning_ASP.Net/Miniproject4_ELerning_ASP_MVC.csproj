@@ -1,0 +1,128 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\admin\assets\css\maps\style.css.map" />
+    <None Include="wwwroot\admin\assets\fonts\Ubuntu\Ubuntu-Bold.woff2" />
+    <None Include="wwwroot\admin\assets\fonts\Ubuntu\Ubuntu-Light.woff2" />
+    <None Include="wwwroot\admin\assets\fonts\Ubuntu\Ubuntu-Medium.woff2" />
+    <None Include="wwwroot\admin\assets\fonts\Ubuntu\Ubuntu-Regular.woff2" />
+    <None Include="wwwroot\admin\assets\images\dashboard\circle.svg" />
+    <None Include="wwwroot\admin\assets\images\file-icons\icon-3.svg" />
+    <None Include="wwwroot\admin\assets\images\file-icons\icon-google.svg" />
+    <None Include="wwwroot\admin\assets\images\logo-mini.svg" />
+    <None Include="wwwroot\admin\assets\images\logo.svg" />
+    <None Include="wwwroot\admin\assets\images\samples\weather.svg" />
+    <None Include="wwwroot\admin\assets\js\chart.js" />
+    <None Include="wwwroot\admin\assets\js\codemirror.js" />
+    <None Include="wwwroot\admin\assets\js\course.js" />
+    <None Include="wwwroot\admin\assets\js\dashboard-dark.js" />
+    <None Include="wwwroot\admin\assets\js\dashboard.js" />
+    <None Include="wwwroot\admin\assets\js\file-upload.js" />
+    <None Include="wwwroot\admin\assets\js\jquery-file-upload.js" />
+    <None Include="wwwroot\admin\assets\js\jquery.cookie.js" />
+    <None Include="wwwroot\admin\assets\js\misc.js" />
+    <None Include="wwwroot\admin\assets\js\off-canvas.js" />
+    <None Include="wwwroot\admin\assets\js\select2.js" />
+    <None Include="wwwroot\admin\assets\js\settings.js" />
+    <None Include="wwwroot\admin\assets\js\todolist.js" />
+    <None Include="wwwroot\admin\assets\js\typeahead.js" />
+    <None Include="wwwroot\admin\assets\scss\light\components\plugin-overrides\_codemirror.scss" />
+    <None Include="wwwroot\admin\assets\scss\light\components\plugin-overrides\_datepicker.scss" />
+    <None Include="wwwroot\admin\assets\scss\light\components\plugin-overrides\_google-charts.scss" />
+    <None Include="wwwroot\admin\assets\scss\light\components\plugin-overrides\_jquery-file-upload.scss" />
+    <None Include="wwwroot\admin\assets\scss\light\components\plugin-overrides\_jvectormap.scss" />
+    <None Include="wwwroot\admin\assets\scss\light\components\plugin-overrides\_owl-carousel.scss" />
+    <None Include="wwwroot\admin\assets\scss\light\components\plugin-overrides\_progressbar-js.scss" />
+    <None Include="wwwroot\admin\assets\scss\light\components\plugin-overrides\_pws-tabs.scss" />
+    <None Include="wwwroot\admin\assets\scss\light\components\plugin-overrides\_select2.scss" />
+    <None Include="wwwroot\admin\assets\scss\light\components\plugin-overrides\_typeahead.scss" />
+    <None Include="wwwroot\admin\assets\scss\light\_variables.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\components\_badges.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\components\_breadcrumbs.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\components\_buttons.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\components\_cards.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\components\_checkbox-radio.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\components\_dropdown.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\components\_forms.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\components\_google-maps.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\components\_icons.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\components\_lists.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\components\_modals.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\components\_preview.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\components\_tables.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\components\_todo-list.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\landing-screens\_auth.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\landing-screens\_project-list.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\landing-screens\_tickets.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\landing-screens\_user-listing.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\mixins\_animation.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\mixins\_background.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\mixins\_badges.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\mixins\_blockqoute.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\mixins\_breadcrumbs.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\mixins\_buttons.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\mixins\_cards.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\mixins\_misc.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\mixins\_no-ui-slider.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\mixins\_pagination.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\mixins\_popovers.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\mixins\_text.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\mixins\_tooltips.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\_dashboard.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\_demo.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\_fonts.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\_footer.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\_functions.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\_misc.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\_reset.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\_typography.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\_utilities.scss" />
+    <None Include="wwwroot\admin\assets\scss\shared\_widget-grid.scss" />
+    <None Include="wwwroot\admin\assets\scss\style.scss" />
+    <None Include="wwwroot\admin\assets\scss\vertical\_vertical-wrapper.scss" />
+    <None Include="wwwroot\admin\assets\scss\_layouts.scss" />
+    <None Include="wwwroot\admin\assets\scss\_navbar.scss" />
+    <None Include="wwwroot\admin\assets\scss\_sidebar.scss" />
+    <None Include="wwwroot\admin\assets\scss\_variables.scss" />
+    <None Include="wwwroot\admin\assets\vendors\bootstrap-datepicker\bootstrap-datepicker.min.js" />
+    <None Include="wwwroot\admin\assets\vendors\chart.js\chart.umd.js" />
+    <None Include="wwwroot\admin\assets\vendors\codemirror\codemirror.js" />
+    <None Include="wwwroot\admin\assets\vendors\codemirror\javascript.js" />
+    <None Include="wwwroot\admin\assets\vendors\codemirror\shell.js" />
+    <None Include="wwwroot\admin\assets\vendors\font-awesome\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\admin\assets\vendors\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\admin\assets\vendors\jquery-file-upload\jquery.uploadfile.min.js" />
+    <None Include="wwwroot\admin\assets\vendors\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\admin\assets\vendors\js\vendor.bundle.base.js" />
+    <None Include="wwwroot\admin\assets\vendors\mdi\css\materialdesignicons.min.css.map" />
+    <None Include="wwwroot\admin\assets\vendors\mdi\fonts\materialdesignicons-webfont.woff2" />
+    <None Include="wwwroot\admin\assets\vendors\owl-carousel-2\owl.carousel.min.js" />
+    <None Include="wwwroot\admin\assets\vendors\pwstabs\jquery.pwstabs.min.js" />
+    <None Include="wwwroot\admin\assets\vendors\select2\select2.min.js" />
+    <None Include="wwwroot\admin\assets\vendors\ti-icons\fonts\themify.svg" />
+    <None Include="wwwroot\admin\assets\vendors\typeahead.js\typeahead.bundle.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.6.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.31" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.31" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.31">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.31" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.31">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Miniproject4_ELerning_ASP.Net.props" />
+</Project>
