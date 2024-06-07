@@ -14,6 +14,7 @@
         <table class="table table-hover">
             <thead>
                 <tr>
+                    <th>Image</th>
                     <th>Title</th>
                     <th>Description</th>
                     <th>Create date</th>
@@ -24,6 +25,7 @@
                 @foreach (var item in Model)
                 {
                     <tr>
+                        <td><img src="~/img/@item.Image" style="width:100px;height:100px" /></td>
                         <td>@item.Title</td>
                         <td>@item.Description</td>
                         <td>@item.CreatedDate</td>

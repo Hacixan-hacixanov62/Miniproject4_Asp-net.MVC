@@ -258,3 +258,4 @@ C:\Asp.Net Tasks\Miniproject4_ELerning_ASP.Net\Miniproject4_ELerning_ASP.Net\obj
 C:\Asp.Net Tasks\Miniproject4_ELerning_ASP.Net\Miniproject4_ELerning_ASP.Net\obj\Debug\net6.0\Miniproject4_ELerning_ASP_MVC.pdb
 C:\Asp.Net Tasks\Miniproject4_ELerning_ASP.Net\Miniproject4_ELerning_ASP.Net\obj\Debug\net6.0\Miniproject4_ELerning_ASP_MVC.genruntimeconfig.cache
 C:\Asp.Net Tasks\Miniproject4_ELerning_ASP.Net\Miniproject4_ELerning_ASP.Net\obj\Debug\net6.0\ref\Miniproject4_ELerning_ASP_MVC.dll
+C:\Asp.Net Tasks\Miniproject4_ELerning_ASP.Net\Miniproject4_ELerning_ASP.Net\obj\Debug\net6.0\Miniproject4_ELerning_ASP_MVC.sourcelink.json

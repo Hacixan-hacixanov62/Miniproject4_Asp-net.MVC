@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "p/bKlfPDJA0zNgLbvU6ZVo/AmI09Ols6hz+3BRtdkIA=",
+  "Hash": "tMaRRkMnvRACwR7SnmJm5CzGAMPZw+0cGwRkHsQ1WzU=",
   "Source": "Miniproject4_ELerning_ASP_MVC",
   "BasePath": "_content/Miniproject4_ELerning_ASP_MVC",
   "Mode": "Default",
@@ -7446,6 +7446,25 @@
       "OriginalItemSpec": "wwwroot\\img\\42c77ebd-3ebd-44e8-99fa-4d260a351d2a-02.jpg"
     },
     {
+      "Identity": "C:\\Asp.Net Tasks\\Miniproject4_ELerning_ASP.Net\\Miniproject4_ELerning_ASP.Net\\wwwroot\\img\\7f017da5-f277-42e7-85cd-a755d93128ef-carousel-2.jpg",
+      "SourceId": "Miniproject4_ELerning_ASP_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Asp.Net Tasks\\Miniproject4_ELerning_ASP.Net\\Miniproject4_ELerning_ASP.Net\\wwwroot\\",
+      "BasePath": "_content/Miniproject4_ELerning_ASP_MVC",
+      "RelativePath": "img/7f017da5-f277-42e7-85cd-a755d93128ef-carousel-2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\7f017da5-f277-42e7-85cd-a755d93128ef-carousel-2.jpg"
+    },
+    {
       "Identity": "C:\\Asp.Net Tasks\\Miniproject4_ELerning_ASP.Net\\Miniproject4_ELerning_ASP.Net\\wwwroot\\img\\about.jpg",
       "SourceId": "Miniproject4_ELerning_ASP_MVC",
       "SourceType": "Discovered",
@@ -7463,25 +7482,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\about.jpg"
-    },
-    {
-      "Identity": "C:\\Asp.Net Tasks\\Miniproject4_ELerning_ASP.Net\\Miniproject4_ELerning_ASP.Net\\wwwroot\\img\\bcac6ea2-3c25-4cda-90af-a828b3049f26-1-1-1200x900.jpg",
-      "SourceId": "Miniproject4_ELerning_ASP_MVC",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Asp.Net Tasks\\Miniproject4_ELerning_ASP.Net\\Miniproject4_ELerning_ASP.Net\\wwwroot\\",
-      "BasePath": "_content/Miniproject4_ELerning_ASP_MVC",
-      "RelativePath": "img/bcac6ea2-3c25-4cda-90af-a828b3049f26-1-1-1200x900.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\bcac6ea2-3c25-4cda-90af-a828b3049f26-1-1-1200x900.jpg"
     },
     {
       "Identity": "C:\\Asp.Net Tasks\\Miniproject4_ELerning_ASP.Net\\Miniproject4_ELerning_ASP.Net\\wwwroot\\img\\carousel-1.jpg",

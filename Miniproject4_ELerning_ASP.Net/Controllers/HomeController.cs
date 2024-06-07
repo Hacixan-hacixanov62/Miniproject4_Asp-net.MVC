@@ -1,27 +1,32 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Miniproject4_ELerning_ASP_MVC.Models;
+using Miniproject4_ELerning_ASP_MVC.Services.Interfaces;
+using Miniproject4_ELerning_ASP_MVC.ViewModels;
 using System.Diagnostics;
 
 namespace Miniproject4_ELerning_ASP_MVC.Models
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ISliderService _sliderService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ISliderService sliderService)
         {
-            _logger = logger;
+            _sliderService = sliderService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            HomeVM model = new()
+            {
+                Sliders = await _sliderService.GetAllAsync()
+            };
+
+            return View(model); 
+           
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+        
 
     }
 }
