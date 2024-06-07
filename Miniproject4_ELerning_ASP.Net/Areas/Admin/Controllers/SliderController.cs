@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Miniproject4_ELerning_ASP_MVC.Data;
 using Miniproject4_ELerning_ASP_MVC.Helpers.Extensions;
+using Miniproject4_ELerning_ASP_MVC.Models;
 using Miniproject4_ELerning_ASP_MVC.Services.Interfaces;
 using Miniproject4_ELerning_ASP_MVC.ViewModels.Sliders;
 
@@ -114,7 +115,12 @@ namespace MVC_Project_ELearning.Areas.Admin.Controllers
 
             if (slider is null) return NotFound();
 
-            return View(new SliderEditVM { Image = slider.Image });
+            return View(new SliderEditVM
+            {
+                Image = slider.Image,
+                Title = slider.Title,
+                Description = slider.Description,
+            });
         }
 
         [HttpPost]

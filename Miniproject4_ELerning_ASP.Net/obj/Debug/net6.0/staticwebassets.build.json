@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hwwE0dy6vwKbYxTyHQ0Bn9oLG1P0PSuVgceNO5vojr8=",
+  "Hash": "VdXDfLQc4bUBJv6V6zREuCmq7TdVX/dfiZ4xwX8E/pg=",
   "Source": "Miniproject4_ELerning_ASP_MVC",
   "BasePath": "_content/Miniproject4_ELerning_ASP_MVC",
   "Mode": "Default",
@@ -7446,6 +7446,25 @@
       "OriginalItemSpec": "wwwroot\\img\\046b0bb7-3542-4c5d-9adc-738524faf31b-WhatsApp Görsel 2024-06-07 saat 13.23.25_e45822b6.jpg"
     },
     {
+      "Identity": "C:\\Asp.Net Tasks\\Miniproject4_ELerning_ASP.Net\\Miniproject4_ELerning_ASP.Net\\wwwroot\\img\\1bdf53f6-9d6f-45ce-babc-4795c09d95cf-about.jpg",
+      "SourceId": "Miniproject4_ELerning_ASP_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Asp.Net Tasks\\Miniproject4_ELerning_ASP.Net\\Miniproject4_ELerning_ASP.Net\\wwwroot\\",
+      "BasePath": "_content/Miniproject4_ELerning_ASP_MVC",
+      "RelativePath": "img/1bdf53f6-9d6f-45ce-babc-4795c09d95cf-about.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\1bdf53f6-9d6f-45ce-babc-4795c09d95cf-about.jpg"
+    },
+    {
       "Identity": "C:\\Asp.Net Tasks\\Miniproject4_ELerning_ASP.Net\\Miniproject4_ELerning_ASP.Net\\wwwroot\\img\\2ed9f15b-2e0f-4429-bdb9-05e34a1d8c0a-carousel-2.jpg",
       "SourceId": "Miniproject4_ELerning_ASP_MVC",
       "SourceType": "Discovered",
@@ -7501,6 +7520,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\42c77ebd-3ebd-44e8-99fa-4d260a351d2a-02.jpg"
+    },
+    {
+      "Identity": "C:\\Asp.Net Tasks\\Miniproject4_ELerning_ASP.Net\\Miniproject4_ELerning_ASP.Net\\wwwroot\\img\\489b4755-ed31-4e4c-9f36-c68b6fe8e0c6-about.jpg",
+      "SourceId": "Miniproject4_ELerning_ASP_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Asp.Net Tasks\\Miniproject4_ELerning_ASP.Net\\Miniproject4_ELerning_ASP.Net\\wwwroot\\",
+      "BasePath": "_content/Miniproject4_ELerning_ASP_MVC",
+      "RelativePath": "img/489b4755-ed31-4e4c-9f36-c68b6fe8e0c6-about.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\489b4755-ed31-4e4c-9f36-c68b6fe8e0c6-about.jpg"
     },
     {
       "Identity": "C:\\Asp.Net Tasks\\Miniproject4_ELerning_ASP.Net\\Miniproject4_ELerning_ASP.Net\\wwwroot\\img\\6637cbfe-274c-4f9f-83b8-586bba14d643-WhatsApp Görsel 2024-06-07 saat 13.23.25_afba660c.jpg",

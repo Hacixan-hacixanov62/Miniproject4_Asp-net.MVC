@@ -1561,6 +1561,10 @@
       "PackagePath": "staticwebassets\\img\\046b0bb7-3542-4c5d-9adc-738524faf31b-WhatsApp Görsel 2024-06-07 saat 13.23.25_e45822b6.jpg"
     },
     {
+      "Id": "C:\\Asp.Net Tasks\\Miniproject4_ELerning_ASP.Net\\Miniproject4_ELerning_ASP.Net\\wwwroot\\img\\1bdf53f6-9d6f-45ce-babc-4795c09d95cf-about.jpg",
+      "PackagePath": "staticwebassets\\img\\1bdf53f6-9d6f-45ce-babc-4795c09d95cf-about.jpg"
+    },
+    {
       "Id": "C:\\Asp.Net Tasks\\Miniproject4_ELerning_ASP.Net\\Miniproject4_ELerning_ASP.Net\\wwwroot\\img\\2ed9f15b-2e0f-4429-bdb9-05e34a1d8c0a-carousel-2.jpg",
       "PackagePath": "staticwebassets\\img\\2ed9f15b-2e0f-4429-bdb9-05e34a1d8c0a-carousel-2.jpg"
     },
@@ -1571,6 +1575,10 @@
     {
       "Id": "C:\\Asp.Net Tasks\\Miniproject4_ELerning_ASP.Net\\Miniproject4_ELerning_ASP.Net\\wwwroot\\img\\42c77ebd-3ebd-44e8-99fa-4d260a351d2a-02.jpg",
       "PackagePath": "staticwebassets\\img\\42c77ebd-3ebd-44e8-99fa-4d260a351d2a-02.jpg"
+    },
+    {
+      "Id": "C:\\Asp.Net Tasks\\Miniproject4_ELerning_ASP.Net\\Miniproject4_ELerning_ASP.Net\\wwwroot\\img\\489b4755-ed31-4e4c-9f36-c68b6fe8e0c6-about.jpg",
+      "PackagePath": "staticwebassets\\img\\489b4755-ed31-4e4c-9f36-c68b6fe8e0c6-about.jpg"
     },
     {
       "Id": "C:\\Asp.Net Tasks\\Miniproject4_ELerning_ASP.Net\\Miniproject4_ELerning_ASP.Net\\wwwroot\\img\\6637cbfe-274c-4f9f-83b8-586bba14d643-WhatsApp Görsel 2024-06-07 saat 13.23.25_afba660c.jpg",

@@ -1,31 +1,32 @@
-﻿ using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Miniproject4_ELerning_ASP_MVC.Data;
 using Miniproject4_ELerning_ASP_MVC.Helpers.Extensions;
 using Miniproject4_ELerning_ASP_MVC.Services;
 using Miniproject4_ELerning_ASP_MVC.Services.Interfaces;
+using Miniproject4_ELerning_ASP_MVC.ViewModels.Abouts;
 using Miniproject4_ELerning_ASP_MVC.ViewModels.Informations;
-using Miniproject4_ELerning_ASP_MVC.ViewModels.Sliders;
 
 namespace Miniproject4_ELerning_ASP_MVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class InformationController : Controller
+    public class AboutController : Controller
     {
         private readonly AppDbContext _context;
-        private readonly IInformationService _informationService;
+        private readonly IAboutService _aboutService;
         private readonly IWebHostEnvironment _env;
-        public InformationController(AppDbContext context,
-                                    IInformationService informationService,
-                                    IWebHostEnvironment env)
+        public AboutController(AppDbContext context,
+                               IAboutService aboutService,
+                                IWebHostEnvironment env)
         {
             _context = context;
-            _informationService = informationService;
+            _aboutService = aboutService;
             _env = env;
+            
         }
 
         public async Task<IActionResult> Index()
         {
-            return View(await _informationService.GetAllAsync());
+            return View(await _aboutService.GetAllAsync());
         }
 
 
@@ -39,7 +40,7 @@ namespace Miniproject4_ELerning_ASP_MVC.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(InformationCreateVM request)
+        public async Task<IActionResult> Create(AboutCreateVM request)
         {
             if (!ModelState.IsValid)
             {
@@ -58,7 +59,7 @@ namespace Miniproject4_ELerning_ASP_MVC.Areas.Admin.Controllers
                 return View();
             }
 
-            bool existSlider = await _informationService.ExistAsync(request.Title, request.Description);
+            bool existSlider = await _aboutService.ExistAsync(request.Title, request.Description);
 
             //if (existSlider)
             //{
@@ -67,7 +68,7 @@ namespace Miniproject4_ELerning_ASP_MVC.Areas.Admin.Controllers
             //    return View();
             //}
 
-            await _informationService.CreateAsync(request);
+            await _aboutService.CreateAsync(request);
 
             return RedirectToAction(nameof(Index));
         }
@@ -79,25 +80,26 @@ namespace Miniproject4_ELerning_ASP_MVC.Areas.Admin.Controllers
         {
             if (id is null) return BadRequest();
 
-            var blog = await _informationService.GetByIdAsync((int)id);
+            var blog = await _aboutService.GetByIdAsync((int)id);
 
             if (blog is null) return NotFound();
 
-            await _informationService.DeleteAsync(blog.Id);
+            await _aboutService.DeleteAsync(blog.Id);
 
             return RedirectToAction(nameof(Index));
         }
+
 
         [HttpGet]
         public async Task<IActionResult> Details(int? id)
         {
             if (id is null) return BadRequest();
 
-            var blog = await _informationService.GetByIdAsync((int)id);
+            var blog = await _aboutService.GetByIdAsync((int)id);
 
             if (blog is null) return NotFound();
 
-            return View(new InformationDetailVM
+            return View(new AboutDetialVM
             {
                 Title = blog.Title,
                 Description = blog.Description,
@@ -107,56 +109,50 @@ namespace Miniproject4_ELerning_ASP_MVC.Areas.Admin.Controllers
         }
 
 
-
         [HttpGet]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id is null) return BadRequest();
 
-            var ınformation = await _context.Informations.FindAsync(id);
+            var about = await _context.Abouts.FindAsync(id);
 
-            if (ınformation is null) return NotFound();
+            if (about is null) return NotFound();
 
-            var viewModel = new InformationEditVM
-            {
-                Image = ınformation.Image,
-                Title = ınformation.Title,
-                Description = ınformation.Description
-
-            };
-
-            return View(viewModel);
-
+            return View(new AboutEditVM {
+                Image = about.Image,
+                Title = about.Title,
+                Description = about.Description,
+            });
         }
 
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int? id, InformationEditVM request)
+        public async Task<IActionResult> Edit(int? id, AboutEditVM request)
         {
             if (id is null) return BadRequest();
 
-            var information = await _context.Informations.FindAsync(id);
+            var about = await _context.Abouts.FindAsync(id);
 
-            if (information is null) return NotFound();
+            if (about is null) return NotFound();
 
             if (request.NewImage is null) return RedirectToAction(nameof(Index));
 
             if (!request.NewImage.CheckFileType("image/"))
             {
                 ModelState.AddModelError("NewImage", "Input can accept only image format");
-                request.Image = information.Image;
+                request.Image = about.Image;
                 return View(request);
             }
 
-            if (!request.NewImage.CheckFileSize(1024))
+            if (!request.NewImage.CheckFileSize(200))
             {
-                ModelState.AddModelError("NewImage", "Image size must be max 1024 KB");
-                request.Image = information.Image;
+                ModelState.AddModelError("NewImage", "Image size must be max 200 KB");
+                request.Image = about.Image;
                 return View(request);
             }
 
-            string oldPath = _env.GenerateFilePath("img", information.Image);
+            string oldPath = _env.GenerateFilePath("img", about.Image);
 
             oldPath.DeleteFileFromLocal();
 
@@ -165,13 +161,13 @@ namespace Miniproject4_ELerning_ASP_MVC.Areas.Admin.Controllers
             string newPath = _env.GenerateFilePath("img", fileName);
 
             await request.NewImage.SaveFileToLocalAsync(newPath);
-
-            information.Image = fileName;
+            about.Image = fileName;
 
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
         }
+
 
 
     }

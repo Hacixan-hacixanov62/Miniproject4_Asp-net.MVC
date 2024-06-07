@@ -6224,6 +6224,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\046b0bb7-3542-4c5d-9adc-738524faf31b-WhatsApp Görsel 2024-06-07 saat 13.23.25_e45822b6.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\1bdf53f6-9d6f-45ce-babc-4795c09d95cf-about.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Miniproject4_ELerning_ASP_MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Miniproject4_ELerning_ASP_MVC</BasePath>
+      <RelativePath>img/1bdf53f6-9d6f-45ce-babc-4795c09d95cf-about.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\1bdf53f6-9d6f-45ce-babc-4795c09d95cf-about.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\2ed9f15b-2e0f-4429-bdb9-05e34a1d8c0a-carousel-2.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Miniproject4_ELerning_ASP_MVC</SourceId>
@@ -6271,6 +6287,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\42c77ebd-3ebd-44e8-99fa-4d260a351d2a-02.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\489b4755-ed31-4e4c-9f36-c68b6fe8e0c6-about.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Miniproject4_ELerning_ASP_MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Miniproject4_ELerning_ASP_MVC</BasePath>
+      <RelativePath>img/489b4755-ed31-4e4c-9f36-c68b6fe8e0c6-about.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\489b4755-ed31-4e4c-9f36-c68b6fe8e0c6-about.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\6637cbfe-274c-4f9f-83b8-586bba14d643-WhatsApp Görsel 2024-06-07 saat 13.23.25_afba660c.jpg))">
       <SourceType>Package</SourceType>

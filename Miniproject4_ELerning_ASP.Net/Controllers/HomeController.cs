@@ -10,13 +10,15 @@ namespace Miniproject4_ELerning_ASP_MVC.Models
     {
         private readonly ISliderService _sliderService;
         private readonly IInformationService _informationService;
+        private readonly IAboutService _aboutService;
 
         public HomeController(ISliderService sliderService,
-                              IInformationService ınformationService)
+                              IInformationService ınformationService,
+                              IAboutService aboutService)
         {
             _sliderService = sliderService;
             _informationService = ınformationService;
-
+            _aboutService = aboutService;
         }
 
         public async Task<IActionResult> Index()
@@ -24,7 +26,8 @@ namespace Miniproject4_ELerning_ASP_MVC.Models
             HomeVM model = new()
             {
                 Sliders = await _sliderService.GetAllAsync(),
-                Informations = await _informationService.GetAllAsync()
+                Informations = await _informationService.GetAllAsync(),
+                Abouts = await _aboutService.GetAllAsync()
             };
 
             return View(model); 
