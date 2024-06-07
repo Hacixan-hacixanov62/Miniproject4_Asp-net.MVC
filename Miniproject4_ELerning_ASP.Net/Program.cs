@@ -11,14 +11,18 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 
+
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
 builder.Services.AddScoped<ISliderService, SliderService>();
+builder.Services.AddScoped<IInformationService, InformationService>();
+
 
 
 
 
 var app = builder.Build();
 
-app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 
