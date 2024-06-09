@@ -223,30 +223,11 @@
                         <a class="nav-link" asp-area="Admin" asp-controller="About" asp-action="Index">
                             <span class="menu-title">Abouts</span>
                         </a>
-                        <div class="collapse" id="forms">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="pages/forms/basic_elements.html">Form Elements</a>
-                                </li>
-                            </ul>
-                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#archive" aria-expanded="false" aria-controls="archive">
-                            <span class="menu-title">Archives</span>
-                            <i class="menu-arrow"></i>
+                        <a class="nav-link" asp-area="Admin" asp-controller="Category" asp-action="Index">
+                            <span class="menu-title">Categories</span>
                         </a>
-                        <div class="collapse" id="archive">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-area="Admin" asp-controller="Archive" asp-action="CategoryArchive">Categories</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-area="Admin" asp-controller="SliderInfo" asp-action="Index">Books</a>
-                                </li>
-
-                            </ul>
-                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-area="Admin" asp-controller="User" asp-action="Index">

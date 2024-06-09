@@ -1,6 +1,7 @@
 ﻿ using Microsoft.AspNetCore.Mvc;
 using Miniproject4_ELerning_ASP_MVC.Data;
 using Miniproject4_ELerning_ASP_MVC.Helpers.Extensions;
+using Miniproject4_ELerning_ASP_MVC.Models;
 using Miniproject4_ELerning_ASP_MVC.Services;
 using Miniproject4_ELerning_ASP_MVC.Services.Interfaces;
 using Miniproject4_ELerning_ASP_MVC.ViewModels.Informations;
@@ -140,33 +141,36 @@ namespace Miniproject4_ELerning_ASP_MVC.Areas.Admin.Controllers
 
             if (information is null) return NotFound();
 
-            if (request.NewImage is null) return RedirectToAction(nameof(Index));
-
-            if (!request.NewImage.CheckFileType("image/"))
+            if (request.NewImage is not null)
             {
-                ModelState.AddModelError("NewImage", "Input can accept only image format");
-                request.Image = information.Image;
-                return View(request);
+                if (!request.NewImage.CheckFileType("image/"))
+                {
+                    ModelState.AddModelError("NewImage", "Input can accept only image format");
+                    request.Image = information.Image;
+                    return View(request);
+                }
+
+                if (!request.NewImage.CheckFileSize(200))
+                {
+                    ModelState.AddModelError("NewImage", "Image size must be max 200 KB");
+                    request.Image = information.Image;
+                    return View(request);
+                }
+
+                string oldPath = _env.GenerateFilePath("img", information.Image);
+
+                oldPath.DeleteFileFromLocal();
+
+                string fileName = Guid.NewGuid().ToString() + "-" + request.NewImage.FileName;
+
+                string newPath = _env.GenerateFilePath("img", fileName);
+
+                await request.NewImage.SaveFileToLocalAsync(newPath);
+                information.Image = fileName;
             }
 
-            if (!request.NewImage.CheckFileSize(1024))
-            {
-                ModelState.AddModelError("NewImage", "Image size must be max 1024 KB");
-                request.Image = information.Image;
-                return View(request);
-            }
-
-            string oldPath = _env.GenerateFilePath("img", information.Image);
-
-            oldPath.DeleteFileFromLocal();
-
-            string fileName = Guid.NewGuid().ToString() + "-" + request.NewImage.FileName;
-
-            string newPath = _env.GenerateFilePath("img", fileName);
-
-            await request.NewImage.SaveFileToLocalAsync(newPath);
-
-            information.Image = fileName;
+            information.Title = request.Title;
+            information.Description = request.Description;
 
             await _context.SaveChangesAsync();
 

@@ -242,6 +242,7 @@ C:\Asp.Net Tasks\Miniproject4_ELerning_ASP.Net\Miniproject4_ELerning_ASP.Net\obj
 C:\Asp.Net Tasks\Miniproject4_ELerning_ASP.Net\Miniproject4_ELerning_ASP.Net\obj\Debug\net6.0\Miniproject4_ELerning_ASP_MVC.MvcApplicationPartsAssemblyInfo.cache
 C:\Asp.Net Tasks\Miniproject4_ELerning_ASP.Net\Miniproject4_ELerning_ASP.Net\obj\Debug\net6.0\Miniproject4_ELerning_ASP_MVC.RazorAssemblyInfo.cache
 C:\Asp.Net Tasks\Miniproject4_ELerning_ASP.Net\Miniproject4_ELerning_ASP.Net\obj\Debug\net6.0\Miniproject4_ELerning_ASP_MVC.RazorAssemblyInfo.cs
+C:\Asp.Net Tasks\Miniproject4_ELerning_ASP.Net\Miniproject4_ELerning_ASP.Net\obj\Debug\net6.0\Miniproject4_ELerning_ASP_MVC.sourcelink.json
 C:\Asp.Net Tasks\Miniproject4_ELerning_ASP.Net\Miniproject4_ELerning_ASP.Net\obj\Debug\net6.0\staticwebassets.build.json
 C:\Asp.Net Tasks\Miniproject4_ELerning_ASP.Net\Miniproject4_ELerning_ASP.Net\obj\Debug\net6.0\staticwebassets.development.json
 C:\Asp.Net Tasks\Miniproject4_ELerning_ASP.Net\Miniproject4_ELerning_ASP.Net\obj\Debug\net6.0\staticwebassets\msbuild.Miniproject4_ELerning_ASP_MVC.Microsoft.AspNetCore.StaticWebAssets.props
@@ -258,4 +259,3 @@ C:\Asp.Net Tasks\Miniproject4_ELerning_ASP.Net\Miniproject4_ELerning_ASP.Net\obj
 C:\Asp.Net Tasks\Miniproject4_ELerning_ASP.Net\Miniproject4_ELerning_ASP.Net\obj\Debug\net6.0\Miniproject4_ELerning_ASP_MVC.pdb
 C:\Asp.Net Tasks\Miniproject4_ELerning_ASP.Net\Miniproject4_ELerning_ASP.Net\obj\Debug\net6.0\Miniproject4_ELerning_ASP_MVC.genruntimeconfig.cache
 C:\Asp.Net Tasks\Miniproject4_ELerning_ASP.Net\Miniproject4_ELerning_ASP.Net\obj\Debug\net6.0\ref\Miniproject4_ELerning_ASP_MVC.dll
-C:\Asp.Net Tasks\Miniproject4_ELerning_ASP.Net\Miniproject4_ELerning_ASP.Net\obj\Debug\net6.0\Miniproject4_ELerning_ASP_MVC.sourcelink.json

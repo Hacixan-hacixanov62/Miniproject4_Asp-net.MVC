@@ -136,39 +136,44 @@ namespace Miniproject4_ELerning_ASP_MVC.Areas.Admin.Controllers
 
             if (about is null) return NotFound();
 
-            if (request.NewImage is null) return RedirectToAction(nameof(Index));
-
-            if (!request.NewImage.CheckFileType("image/"))
+            if (request.NewImage is not null)
             {
-                ModelState.AddModelError("NewImage", "Input can accept only image format");
-                request.Image = about.Image;
-                return View(request);
+                if (!request.NewImage.CheckFileType("image/"))
+                {
+                    ModelState.AddModelError("NewImage", "Input can accept only image format");
+                    request.Image = about.Image;
+                    return View(request);
+                }
+
+                if (!request.NewImage.CheckFileSize(200))
+                {
+                    ModelState.AddModelError("NewImage", "Image size must be max 200 KB");
+                    request.Image = about.Image;
+                    return View(request);
+                }
+
+                string oldPath = _env.GenerateFilePath("img", about.Image);
+
+                oldPath.DeleteFileFromLocal();
+
+                string fileName = Guid.NewGuid().ToString() + "-" + request.NewImage.FileName;
+
+                string newPath = _env.GenerateFilePath("img", fileName);
+
+                await request.NewImage.SaveFileToLocalAsync(newPath);
+                about.Image = fileName;
             }
 
-            if (!request.NewImage.CheckFileSize(200))
-            {
-                ModelState.AddModelError("NewImage", "Image size must be max 200 KB");
-                request.Image = about.Image;
-                return View(request);
-            }
-
-            string oldPath = _env.GenerateFilePath("img", about.Image);
-
-            oldPath.DeleteFileFromLocal();
-
-            string fileName = Guid.NewGuid().ToString() + "-" + request.NewImage.FileName;
-
-            string newPath = _env.GenerateFilePath("img", fileName);
-
-            await request.NewImage.SaveFileToLocalAsync(newPath);
-            about.Image = fileName;
+            about.Title = request.Title;
+            about.Description = request.Description;
 
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
         }
-
-
-
     }
+
+
+
+    
 }

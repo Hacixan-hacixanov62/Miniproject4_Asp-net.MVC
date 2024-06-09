@@ -10,6 +10,7 @@ namespace Miniproject4_ELerning_ASP_MVC.Data
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Information>Informations { get; set; }
         public DbSet<About>Abouts { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -17,6 +18,8 @@ namespace Miniproject4_ELerning_ASP_MVC.Data
             modelBuilder.Entity<Slider>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Information>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<About>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Category>().HasQueryFilter(m => !m.SoftDeleted);
+
         }
     }
 }
