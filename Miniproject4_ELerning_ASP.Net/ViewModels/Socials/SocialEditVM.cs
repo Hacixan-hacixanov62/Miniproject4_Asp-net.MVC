@@ -2,5 +2,6 @@
 {
     public class SocialEditVM
     {
+        public string Name { get; set; }
     }
 }
