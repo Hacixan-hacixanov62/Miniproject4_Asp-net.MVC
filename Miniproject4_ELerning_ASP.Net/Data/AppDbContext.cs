@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Miniproject4_ELerning_ASP_MVC.Models;
 
 namespace Miniproject4_ELerning_ASP_MVC.Data
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<AppUser>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
@@ -27,6 +28,9 @@ namespace Miniproject4_ELerning_ASP_MVC.Data
             modelBuilder.Entity<Course>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Social>().HasQueryFilter(m => !m.SoftDeleted);
 
+            base.OnModelCreating(modelBuilder);
+
         }
+
     }
 }
