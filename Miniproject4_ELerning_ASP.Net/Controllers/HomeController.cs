@@ -13,18 +13,21 @@ namespace Miniproject4_ELerning_ASP_MVC.Models
         private readonly IAboutService _aboutService;
         private readonly ICategoryService _categoryService;
         private readonly IInstructorService _instructorService;
+        private readonly ICourseServicecs _courseServicecs;
 
         public HomeController(ISliderService sliderService,
                               IInformationService ınformationService,
                               IAboutService aboutService,
                               ICategoryService categoryService,
-                              IInstructorService instructorService)
+                              IInstructorService instructorService,
+                              ICourseServicecs courseServicecs)
         {
             _sliderService = sliderService;
             _informationService = ınformationService;
             _aboutService = aboutService;
             _categoryService = categoryService;
             _instructorService = instructorService;
+            _courseServicecs = courseServicecs;
             
         }
 
@@ -36,7 +39,8 @@ namespace Miniproject4_ELerning_ASP_MVC.Models
                 Informations = await _informationService.GetAllAsync(),
                 Abouts = await _aboutService.GetAllAsync(),
                 Categories = await _categoryService.GetAllAsync(),
-                Instructors = await _instructorService.GetAllAsync()
+                Instructors = await _instructorService.GetAllAsync(),
+                Courses = await _courseServicecs.GetAllAsync()
             };
 
             return View(model); 

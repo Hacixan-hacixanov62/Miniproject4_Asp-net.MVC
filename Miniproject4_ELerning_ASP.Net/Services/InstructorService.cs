@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Miniproject4_ELerning_ASP_MVC.Data;
 using Miniproject4_ELerning_ASP_MVC.Helpers.Extensions;
 using Miniproject4_ELerning_ASP_MVC.Models;
@@ -96,5 +97,14 @@ namespace Miniproject4_ELerning_ASP_MVC.Services
         {
             return  await _context.Instructors.FirstOrDefaultAsync(m => m.Id == id);
         }
+
+        public async Task<SelectList> GetAllSelectedAsync()
+        {
+            var instructors = await _context.Instructors
+                .ToListAsync();
+
+            return new SelectList(instructors, "Id", "FullName");
+        }
+
     }
 }

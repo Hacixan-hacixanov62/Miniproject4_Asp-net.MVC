@@ -13,6 +13,7 @@ namespace Miniproject4_ELerning_ASP_MVC.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<Instructor> Instructors { get; set; }
         public DbSet<Course> Courses { get; set; }
+        public DbSet<Social> Socials { get; set; }
 
 
 
@@ -24,6 +25,7 @@ namespace Miniproject4_ELerning_ASP_MVC.Data
             modelBuilder.Entity<Category>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Instructor>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Course>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Social>().HasQueryFilter(m => !m.SoftDeleted);
 
         }
     }

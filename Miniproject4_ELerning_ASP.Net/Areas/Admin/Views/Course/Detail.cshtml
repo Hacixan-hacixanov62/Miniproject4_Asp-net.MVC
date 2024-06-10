@@ -11,7 +11,7 @@
             @foreach (var item in Model.CourseImages)
             {
                 <div class="col-3 pr-1">
-                    <img src="~/assets/images/@item.Name" class="mb-2 mw-100 w-100 rounded"
+                    <img src="~/img/@item.Name" class="mb-2 mw-100 w-100 rounded"
                          alt="image"
                          style=" height:200px;@(item.IsMain ? "border: 3px solid darkorchid;" : "")" />
                 </div>
@@ -23,10 +23,10 @@
                 <p class="mr-2 mb-2"><strong>Description:</strong> @Model.Description</p>
                 <p class="mr-2 mb-2"><strong>Category:</strong> @Model.Category</p>
                 <p class="mr-2 mb-2"><strong>Price:</strong> $@Model.Price</p>
-                <p class="mr-2 mb-2"><strong>Rating:</strong> $@Model.Rating</p>
-                <p class="mr-2 mb-2"><strong>Instructor:</strong> $@Model.Instructor</p>
-                <p class="mr-2 mb-2"><strong>Category:</strong> $@Model.Category</p>
-                <p class="mr-2 mb-2"><strong>Price:</strong> @(Model.Price != null ? $"${Model.Price}" : "N/A")</p>
+                <p class="mr-2 mb-2"><strong>Rating:</strong> @Model.Rating</p>
+                <p class="mr-2 mb-2"><strong>Instructor:</strong> @Model.Instructor</p>
+                <p class="mr-2 mb-2"><strong>StartDate:</strong> @Model.StartDate</p>
+                <p class="mr-2 mb-2"><strong>EndDate:</strong> @Model.EndDate</p>
                 <a class="btn btn-primary mt-3" asp-action="Index">Back</a>
             </div>
         </div>

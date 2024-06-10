@@ -1,4 +1,5 @@
-﻿using Miniproject4_ELerning_ASP_MVC.Models;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Miniproject4_ELerning_ASP_MVC.Models;
 using Miniproject4_ELerning_ASP_MVC.ViewModels.Categories;
 using Miniproject4_ELerning_ASP_MVC.ViewModels.Instructors;
 
@@ -12,5 +13,6 @@ namespace Miniproject4_ELerning_ASP_MVC.Services.Interfaces
         Task DeleteAsync(int id);
         Task<InstructorVM> GetByIdMappedAsync(int id);
         Task<Instructor> GetByIdAsync(int id);
+        Task<SelectList> GetAllSelectedAsync();
     }
 }

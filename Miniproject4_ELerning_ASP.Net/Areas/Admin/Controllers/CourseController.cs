@@ -19,15 +19,19 @@ namespace Miniproject4_ELerning_ASP_MVC.Areas.Admin.Controllers
         private readonly ICourseServicecs _courseService;
         private readonly IWebHostEnvironment _env;
         private readonly ICategoryService _categoryService;
+        private readonly IInstructorService _instructorService;
         public CourseController(AppDbContext context,
                                 ICourseServicecs courseServicecs,
                                 IWebHostEnvironment env,
-                                ICategoryService categoryService)
+                                ICategoryService categoryService,
+                                IInstructorService instructorService)
         {
             _context = context;
             _courseService = courseServicecs;
             _env = env;
             _categoryService = categoryService;
+            _instructorService = instructorService;
+
 
         }
 
@@ -60,7 +64,7 @@ namespace Miniproject4_ELerning_ASP_MVC.Areas.Admin.Controllers
         public async Task<IActionResult> Create()
         {
             ViewBag.categories = await _categoryService.GetAllSelectedAsync();
-            ViewBag.instructor = await _categoryService.GetAllSelectedAsync();
+            ViewBag.instructors = await _instructorService.GetAllSelectedAsync();
 
             return View();
         }
@@ -70,7 +74,7 @@ namespace Miniproject4_ELerning_ASP_MVC.Areas.Admin.Controllers
         public async Task<IActionResult> Create(CourseCreateVM request)
         {
             ViewBag.categories = await _categoryService.GetAllSelectedAsync();
-            ViewBag.instructor = await _categoryService.GetAllSelectedAsync();
+            ViewBag.instructors = await _instructorService.GetAllSelectedAsync();
 
 
             if (!ModelState.IsValid)
@@ -142,6 +146,7 @@ namespace Miniproject4_ELerning_ASP_MVC.Areas.Admin.Controllers
             if (course is null) return NotFound();
 
             ViewBag.categories = _categoryService.GetAllSelectedAsync().Result.OrderBy(m => m.Text);
+            ViewBag.instructors = await _instructorService.GetAllSelectedAsync();
 
             return View(new CourseEditVM
             {
@@ -168,6 +173,7 @@ namespace Miniproject4_ELerning_ASP_MVC.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? id, CourseEditVM request)
         {
+            ViewBag.instructors = await _instructorService.GetAllSelectedAsync();
             if (id is null) return BadRequest();
 
             var course = await _courseService.GetByIdWithAllDatasAsync((int)id);

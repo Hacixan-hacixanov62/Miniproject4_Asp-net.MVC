@@ -18,7 +18,7 @@ namespace Miniproject4_ELerning_ASP_MVC.Services
         {
             _context = context;
             _env = env;
-            
+
         }
 
         public async Task CreateAsync(CourseCreateVM request)
@@ -119,12 +119,14 @@ namespace Miniproject4_ELerning_ASP_MVC.Services
             return await _context.Courses
                 .Include(m => m.CourseImages)
                 .Include(m => m.Category)
+                .Include(m => m.Instructor)
                 .Select(m => new CourseVM
                 {
                     Name = m.Name,
                     Price = m.Price,
-                    Description = m.Description,
                     Rating = m.Rating,
+                    Category = m.Category.Name,
+                    Instructor = m.Instructor.FullName,
                     MainImage = m.CourseImages.FirstOrDefault(i => i.IsMain).Name
                 })
                 .ToListAsync();
@@ -161,7 +163,7 @@ namespace Miniproject4_ELerning_ASP_MVC.Services
             return await _context.Courses.CountAsync();
         }
 
-        public  IEnumerable<CourseAdminVM> GetMappedDatas(IEnumerable<Course> courses)
+        public IEnumerable<CourseAdminVM> GetMappedDatas(IEnumerable<Course> courses)
         {
             return courses.Select(m => new CourseAdminVM
             {
