@@ -1,4 +1,5 @@
-﻿using Miniproject4_ELerning_ASP_MVC.ViewModels.Abouts;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Miniproject4_ELerning_ASP_MVC.ViewModels.Abouts;
 using Miniproject4_ELerning_ASP_MVC.ViewModels.Categories;
 
 namespace Miniproject4_ELerning_ASP_MVC.Services.Interfaces
@@ -10,5 +11,7 @@ namespace Miniproject4_ELerning_ASP_MVC.Services.Interfaces
         Task<bool> ExistAsync(string name);
         Task DeleteAsync(int id);
         Task<CategoryVM> GetByIdAsync(int id);
+        Task<SelectList> GetAllSelectedAsync();
+
     }
 }

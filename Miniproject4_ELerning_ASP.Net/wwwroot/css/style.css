@@ -275,12 +275,17 @@
 /*** Categories & Courses ***/
 .category img,
 .course-item img {
-    transition: .5s;
+    transition: .5s
+}
+
+.category a:hover img {
+    width: 100%;
 }
 
 .category a:hover img,
 .course-item:hover img {
     transform: scale(1.1);
+
 }
 
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Miniproject4_ELerning_ASP_MVC.Data;
 using Miniproject4_ELerning_ASP_MVC.Helpers.Extensions;
 using Miniproject4_ELerning_ASP_MVC.Models;
@@ -71,6 +72,15 @@ namespace Miniproject4_ELerning_ASP_MVC.Services
             return categories.Select(m => new CategoryVM { Id = m.Id, Image = m.Image,Name = m.Name, CreatedDate = m.CreatedDate.ToString("MM.dd.yyyy") });
 
         }
+
+        public async Task<SelectList> GetAllSelectedAsync()
+        {
+            var categories = await _context.Categories
+                .ToListAsync();
+
+            return new SelectList(categories, "Id", "Name");
+        }
+
 
         public async Task<CategoryVM> GetByIdAsync(int id)
         {

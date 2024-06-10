@@ -18,6 +18,7 @@ builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped<IInformationService, InformationService>();
 builder.Services.AddScoped<IAboutService, AboutService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IInstructorService, InstructorService>();
 
 
 

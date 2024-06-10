@@ -1,0 +1,40 @@
+﻿@model InstructorCreateVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="card">
+    <div class="card-body">
+        <form class="forms-sample" method="post" asp-action="Create" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="inputBlogTitle">Instructor FullName</label>
+                <input asp-for="FullName" class="form-control" id="inputBlogTitle" placeholder="FullName..." maxlength="100">
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="inputBlogDescription">Instructor Field</label>
+                <input asp-for="Field" class="form-control" id="inputBlogDescription" placeholder="Field.."></input>
+                <span asp-validation-for="Field" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="inputBlogDescription">Instructor Address</label>
+                <input asp-for="Address" class="form-control" id="inputBlogDescription" placeholder="Address.."></input>
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="inputBlogDescription">Instructor Email</label>
+                <input asp-for="Email" class="form-control" id="inputBlogDescription" placeholder="Email.."></input>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="inputCategoryName">Instructor Image</label>
+                <input asp-for="Image" accept="image/*" class="form-control" id="inputCategoryName" placeholder="Image.." maxlength="100">
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
+            <a class="btn btn-light" asp-action="Index">Cancel</a>
+        </form>
+    </div>
+</div>
+

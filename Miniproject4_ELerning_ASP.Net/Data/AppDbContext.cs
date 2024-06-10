@@ -11,6 +11,9 @@ namespace Miniproject4_ELerning_ASP_MVC.Data
         public DbSet<Information>Informations { get; set; }
         public DbSet<About>Abouts { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Instructor> Instructors { get; set; }
+        public DbSet<Course> Courses { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -19,6 +22,8 @@ namespace Miniproject4_ELerning_ASP_MVC.Data
             modelBuilder.Entity<Information>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<About>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Category>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Instructor>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Course>().HasQueryFilter(m => !m.SoftDeleted);
 
         }
     }
