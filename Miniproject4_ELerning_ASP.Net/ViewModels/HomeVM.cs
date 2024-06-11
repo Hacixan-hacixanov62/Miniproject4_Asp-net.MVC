@@ -5,6 +5,7 @@ using Miniproject4_ELerning_ASP_MVC.ViewModels.Course;
 using Miniproject4_ELerning_ASP_MVC.ViewModels.Informations;
 using Miniproject4_ELerning_ASP_MVC.ViewModels.Instructors;
 using Miniproject4_ELerning_ASP_MVC.ViewModels.Sliders;
+using Miniproject4_ELerning_ASP_MVC.ViewModels.Student;
 
 namespace Miniproject4_ELerning_ASP_MVC.ViewModels
 {
@@ -16,6 +17,7 @@ namespace Miniproject4_ELerning_ASP_MVC.ViewModels
         public IEnumerable<CategoryVM> Categories { get; set; }
         public IEnumerable<InstructorVM> Instructors { get; set; }
         public IEnumerable<CourseVM> Courses { get; set; }
+        public IEnumerable<StudentVM> Students { get; set; }
 
 
     }

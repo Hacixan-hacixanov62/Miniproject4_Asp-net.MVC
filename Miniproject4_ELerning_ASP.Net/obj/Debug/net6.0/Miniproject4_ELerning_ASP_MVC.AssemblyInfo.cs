@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Miniproject4_ELerning_ASP_MVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef92064a4a95a1bf6ab1a40c4a334509e00dba1e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+770e530908edde045d5c1656211ea4f550f3a192")]
 [assembly: System.Reflection.AssemblyProductAttribute("Miniproject4_ELerning_ASP_MVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Miniproject4_ELerning_ASP_MVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

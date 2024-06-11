@@ -74,7 +74,7 @@ namespace Miniproject4_ELerning_ASP_MVC.Areas.Admin.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPost]  
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int? id)
         {

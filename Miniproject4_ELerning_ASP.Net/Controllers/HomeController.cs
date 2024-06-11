@@ -14,13 +14,15 @@ namespace Miniproject4_ELerning_ASP_MVC.Models
         private readonly ICategoryService _categoryService;
         private readonly IInstructorService _instructorService;
         private readonly ICourseServicecs _courseServicecs;
+        private readonly IStudentService _studentService;
 
         public HomeController(ISliderService sliderService,
                               IInformationService ınformationService,
                               IAboutService aboutService,
                               ICategoryService categoryService,
                               IInstructorService instructorService,
-                              ICourseServicecs courseServicecs)
+                              ICourseServicecs courseServicecs,
+                              IStudentService studentService)
         {
             _sliderService = sliderService;
             _informationService = ınformationService;
@@ -28,7 +30,7 @@ namespace Miniproject4_ELerning_ASP_MVC.Models
             _categoryService = categoryService;
             _instructorService = instructorService;
             _courseServicecs = courseServicecs;
-            
+            _studentService = studentService;
         }
 
         public async Task<IActionResult> Index()
@@ -40,7 +42,8 @@ namespace Miniproject4_ELerning_ASP_MVC.Models
                 Abouts = await _aboutService.GetAllAsync(),
                 Categories = await _categoryService.GetAllAsync(),
                 Instructors = await _instructorService.GetAllAsync(),
-                Courses = await _courseServicecs.GetAllAsync()
+                Courses = await _courseServicecs.GetAllAsync(),
+                Students = await _studentService.GetAllAsync()
             };
 
             return View(model); 

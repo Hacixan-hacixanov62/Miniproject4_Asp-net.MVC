@@ -173,7 +173,9 @@ namespace Miniproject4_ELerning_ASP_MVC.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? id, CourseEditVM request)
         {
-            ViewBag.instructors = await _instructorService.GetAllSelectedAsync();
+           ViewBag.instructors = await _instructorService.GetAllSelectedAsync();
+            ViewBag.categories = _categoryService.GetAllSelectedAsync().Result.OrderBy(m => m.Text);
+
             if (id is null) return BadRequest();
 
             var course = await _courseService.GetByIdWithAllDatasAsync((int)id);
@@ -193,7 +195,7 @@ namespace Miniproject4_ELerning_ASP_MVC.Areas.Admin.Controllers
 
             if (!ModelState.IsValid)
             {
-                ViewBag.categories = _categoryService.GetAllSelectedAsync().Result.OrderBy(m => m.Text);
+               // ViewBag.categories = _categoryService.GetAllSelectedAsync().Result.OrderBy(m => m.Text);
                 return View(request);
             }
 
@@ -202,7 +204,7 @@ namespace Miniproject4_ELerning_ASP_MVC.Areas.Admin.Controllers
                 if (decimal.Parse(request.Price) <= decimal.Parse(request.Price))
                 {
                     ModelState.AddModelError("Price", " price must be smaller than price");
-                    ViewBag.categories = _categoryService.GetAllSelectedAsync().Result.OrderBy(m => m.Text);
+                    //ViewBag.categories = _categoryService.GetAllSelectedAsync().Result.OrderBy(m => m.Text);
                     return View(request);
                 }
             }
@@ -214,14 +216,14 @@ namespace Miniproject4_ELerning_ASP_MVC.Areas.Admin.Controllers
                     if (!item.CheckFileSize(500))
                     {
                         ModelState.AddModelError("Images", "Image size can be max 500 Kb");
-                        ViewBag.categories = _categoryService.GetAllSelectedAsync().Result.OrderBy(m => m.Text);
+                        //ViewBag.categories = _categoryService.GetAllSelectedAsync().Result.OrderBy(m => m.Text);
                         return View(request);
                     }
 
                     if (!item.CheckFileType("image/"))
                     {
                         ModelState.AddModelError("Images", "File type must be only image");
-                        ViewBag.categories = _categoryService.GetAllSelectedAsync().Result.OrderBy(m => m.Text);
+                        //ViewBag.categories = _categoryService.GetAllSelectedAsync().Result.OrderBy(m => m.Text);
                         return View(request);
                     }
                 }
